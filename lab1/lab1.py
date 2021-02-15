@@ -30,8 +30,7 @@ class Solution:
         pass
 
     def most_ordered_item(self):
-        quantityelf.chipo.groupby("choice_description")[
-            "quantity"].sum().sort_values().max()
+        quantityelf.chipo.groupby("choice_description")["quantity"].sum().sort_values().max()
         itemName = "Chicken Bowl"
         orderId = self.chipo.groupby("item_name")["order_id"].sum()[itemName]
         return itemName, order_id, quantity
@@ -48,11 +47,9 @@ class Solution:
         return self.chipo["order_id"].nunique()
 
     def average_sales_amount_per_order(self) -> float:
-        average_sales_amount_per_order = (self.chipo["item_price"].apply(
-            lambda x: x.strip('$')).astype(float) * self.chipo["quantity"]).sum()
+        average_sales_amount_per_order = (self.chipo["item_price"].apply(lambda x: x.strip('$')).astype(float) * self.chipo["quantity"]).sum()
         average_sales_amount_per_order /= self.chipo["order_id"].nunique()
-        average_sales_amount_per_order = round(
-            average_sales_amount_per_order, 2)
+        average_sales_amount_per_order = round(average_sales_amount_per_order, 2)
         return average_sales_amount_per_order
 
     def num_different_items_sold(self) -> int:
@@ -61,8 +58,7 @@ class Solution:
     def plot_histogram_top_x_popular_items(self, x: int) -> None:
         from collections import Counter
         letter_counter = Counter(self.chipo.item_name)
-        df = pd.DataFrame.from_dict(
-            letter_counter, orient='index').reset_index()
+        df = pd.DataFrame.from_dict(letter_counter, orient='index').reset_index()
         df.columns = ['item_name', 'quantity']
         df.rename(columns={'index': 'item_name', 0: 'quantity'})
         df = df.sort_values('quantity', ascending=False).head(5)
@@ -78,8 +74,7 @@ class Solution:
 
     def scatter_plot_num_items_per_order_price(self) -> None:
 
-        self.chipo["item_price"] = self.chipo["item_price"].apply(
-            lambda x: x.strip('$')).astype(float) * self.chipo["quantity"]
+        self.chipo["item_price"] = self.chipo["item_price"].apply(lambda x: x.strip('$')).astype(float) * self.chipo["quantity"]
         tempx = self.chipo.groupby("order_id")["item_price"].sum()
         tempy = self.chipo.groupby("order_id")["quantity"].sum()
         plt.scatter(x=tempx, y=tempy, s=50, c="blue")
