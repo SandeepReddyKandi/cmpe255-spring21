@@ -39,8 +39,7 @@ class Solution:
         return self.chipo["quantity"].sum()
 
     def total_sales(self) -> float:
-        total_sales = (self.chipo["item_price"].apply(
-            lambda a: a.strip('$')).astype(float) * self.chipo["quantity"]).sum()
+        total_sales = (self.chipo["item_price"].apply(lambda a: a.strip('$')).astype(float) * self.chipo["quantity"]).sum()
         return total_sales
 
     def num_orders(self) -> int:
