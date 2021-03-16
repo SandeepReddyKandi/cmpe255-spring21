@@ -1,0 +1,37 @@
+OUTPUT:
+
+Performing the Linear Regression: 
+ For train data:
+The RMSE score is: 6.969623299980506
+The R2 score is: 0.519234726413198
+ For test data:
+The RMSE score is: 5.26748674631143
+The R2 score is: 0.20060165890609538
+---------------------------------------
+Performing the Polynomial Regression
+ For train data:
+The RMSE score is: 6.176334816374915
+The R2 score is: 0.6224485514330222
+ For test data:
+The RMSE score is: 4.75454598636495
+The R2 score is: 0.34870994875778083
+---------------------------------------
+Performing the Polynomial Regression
+ For train data:
+The RMSE score is: 8.66498817477659
+The R2 score is: 0.2568945818548042
+ For test data:
+The RMSE score is: 6.27391123740257
+The R2 score is: -0.13405228951710457
+---------------------------------------
+Performing the Multiple Regression:
+ For train data:
+The RMSE score is: 6.016685608371992
+The R2 score is: 0.6417145954788916
+303
+The adjusted r score is : 0.6381197586442318
+ For test data:
+The RMSE score is: 3.587415276474503
+The R2 score is: 0.6292171434509835
+The adjusted r2 score is: 0.6177496324236943
+
