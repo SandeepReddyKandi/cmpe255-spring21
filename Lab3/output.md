@@ -1,13 +1,10 @@
 
 |     Experiement    |       Accuracy          |     Confusion Matrix        |                                    Comment                                         |                                                                                 
 |--------------------|-------------------------|-----------------------------|------------------------------------------------------------------------------------|
-|     Baseline       |   0.6770833333333334    |    [[114  16] [ 46  16]]    |                                                                                    |
-                                                                      
+|     Baseline       |   0.6770833333333334    |    [[114  16] [ 46  16]]    |                                                                                    |                                                               
 |     Solution 1     |   0.7708333333333334    |    [[115, 15], [29, 33]]    |     Used features:  ['glucose','insulin', 'bmi', 'age']                            |                                                                        											
-|     Solution 2     |   0.6822916666666666    |    [[115, 15], [46, 16]]    |     Used features:  ['bp','Insulin', 'bmi', 'age']                                 |   
-                                                                                                                                          
-|     Solution 3     |   0.7760416666666666    |    [[114, 16], [27, 35]]    |     Used features:  ['bp', 'glucose', 'insulin', 'bmi', 'age']                     |   
-                                                                                                                                                             
+|     Solution 2     |   0.6822916666666666    |    [[115, 15], [46, 16]]    |     Used features:  ['bp','Insulin', 'bmi', 'age']                                 |                                                                                                                                        
+|     Solution 3     |   0.7760416666666666    |    [[114, 16], [27, 35]]    |     Used features:  ['bp', 'glucose', 'insulin', 'bmi', 'age']                     |                                                                                                                                                       
 |     Solution 4     |   0.8020833333333334    |    [[118, 12], [26, 36]]    |    Used features: ['pregnant', 'glucose', 'bp', 'insulin', 'bmi', 'age','pedigree']|    
                                                                                                          
          
